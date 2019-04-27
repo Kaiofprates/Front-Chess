@@ -1,5 +1,5 @@
 body {
-   background: linear-gradient(to right, rgb(43, 88, 118), rgb(78, 67, 118));
+   background: linear-gradient(to right, rgb(2, 24, 39), rgb(78, 67, 118));
 }
 
 .frame {
@@ -8,13 +8,14 @@ body {
     padding: 8px;
     margin-top: 0px;
     margin-bottom: 0px;
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(9, 1fr);
 }
 
 .whiteHouse {
     margin-top: 0px;
+    margin-left: 10px;
     height: 80px;
-    background-color: white;
+    background-color: #FFFFFF;
     margin-bottom: 0px;
 }
 
@@ -32,7 +33,17 @@ body {
   overflow: hidden;
 }
 
-#pices {
-    margin-left: 15px;
+#pieces {
+    /* margin-left: 15px;
+    margin-top: 20px; */
+}
+
+.whiteSpace { 
+
+    height: 5px;
     margin-top: 20px;
+    margin-left: 30px;
+    font-size: 30px;
+    background-color: white;
+
 }

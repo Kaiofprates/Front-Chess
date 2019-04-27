@@ -1,5 +1,7 @@
 #  -- Front Chess  --- 🎮   👓 
 ---
+### Axios adicionado! 
+> use o plugin **Live Server** do VS Code ou o http-server do node.js se não quizer dar de cara com o CORS 😀
 ### Jogo de xadrez feito na marra pura "dibrando o css" 
 ### Notas:
  * Há um id em cada casa para melhor identificação 
