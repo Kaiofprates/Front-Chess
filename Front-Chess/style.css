@@ -1,0 +1,49 @@
+body {
+   background: linear-gradient(to right, rgb(2, 24, 39), rgb(78, 67, 118));
+}
+
+.frame {
+    display: grid;
+    width: 680px;
+    padding: 8px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    grid-template-columns: repeat(9, 1fr);
+}
+
+.whiteHouse {
+    margin-top: 0px;
+    margin-left: 10px;
+    height: 65px;
+    background-color: "gray";
+    margin-bottom: 0px;
+}
+
+.blackHouse {
+    margin-top: 0px;
+    background-color: black;
+    height:65px;
+    margin-bottom: 0px;
+}
+
+#app {
+  display: flex;
+  justify-content:center;
+  align-content: center;
+  overflow: hidden;
+  
+}
+
+#pieces {
+     margin-left: 10px;
+}
+
+.whiteSpace { 
+
+    height: 5px;
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 30px;
+    background-color: white;
+
+}

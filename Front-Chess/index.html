@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+    <title>Front Chess</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+
+<div id="app">
+<v-app>
+  <div class="frame">
+  <h1>A</h1><h1>B</h1><h1>C</h1><h1>D</h1><h1>E</h1><h1>F</h1><h1>G</h1><h1>H</h1>
+  <h1></h1>
+
+  <div v-for="i in 72">
+
+        <p v-if="i == 9 || i == 18 || i == 27 || 
+        i == 36 || i == 45 || i == 54 || i == 63 || i == 72"
+        class="whiteSpace">{{ i / 9 }}</p>
+
+        <p v-else-if=" i%2 != 0 " class="blackHouse">
+        <v-icon id="pieces" size="50" :color='index[0][i]["color"]'>{{index[0][i]["pieces"]}}</v-icon>
+        </p>
+        <p v-else class="whiteHouse">
+        <v-icon id="pieces" size="50" :color='index[0][i]["color"]'>{{index[0][i]["pieces"]}}</v-icon>
+        </p>
+    </div>
+</v-app>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+
+        var vm = new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+            data () {
+                return { 
+                index: [],
+                pieces:["","fas fa-chess-rook",
+                "fas fa-chess-knight",
+                "fas fa-chess-bishop",
+                "fas fa-chess-king",
+                "fas fa-chess-queen",
+                "fas fa-chess-pawn",
+                ""],
+                cor : "#FF0000"
+                }
+            }
+        })
+        
+            
+      axios.get('./tab.json')
+                   .then(function (response) {
+                    // handle success
+                vm.index.push(response.data);
+                })
+                .catch(function (error) {
+                   // handle error
+                console.log(error);})
+                .then(function () {
+                // always executed
+             });
+
+     console.log(vm.index)
+
+    </script>
+</body>
+
+</html>

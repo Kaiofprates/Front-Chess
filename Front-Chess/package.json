@@ -1,0 +1,24 @@
+{
+  "name": "front-chess",
+  "version": "1.0.0",
+  "description": "--- ### Axios adicionado!  ---- #### começando a lógica das requisições no arquivo index.js, é necessário adicionar o express e o edit-json-file ```sh $ npm init $ npm install --save edit-json-file $ npm install express --save",
+  "main": "index.js",
+  "dependencies": {
+    "edit-json-file": "^1.4.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaiofprates/Front-Chess.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaiofprates/Front-Chess/issues"
+  },
+  "homepage": "https://github.com/Kaiofprates/Front-Chess#readme"
+}
